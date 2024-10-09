@@ -5,7 +5,7 @@
     <div class="introduce">
       <h2>自我介紹</h2>
       <div class="introduce_text">
-        <span class="Role_name">I'm Jinwei</span>
+        <span class="Role_name">I'm Chouwill</span>
         <h2>
           Web developer x Investor x Language Community Builder<br> Loving to explore new stuff,
           traveling, and building fantastic projects!
@@ -18,7 +18,7 @@
 <style lang="scss" scoped>
 main {
   // background-color: #11a728;
-  background-color: rgba(255, 255, 255, 0.5); /* 使用半透明白色背景 */
+  
   background-color: rgba(255, 255, 255, 0.321); /* 使用半透明白色背景 */
 
   display: flex;
@@ -34,8 +34,9 @@ main {
   .introduce {
     margin-top: 40px;
     width: 40vw;
-    border: 2px solid red;
+    // border: 2px solid red;
     height: 40vh;
+    // background-color: #F8F8F8;
 
     h2 {
       text-align: center;
@@ -44,14 +45,14 @@ main {
   .introduce_text {
     width: 100%;
     height: 25vh;
-    border: 2px solid red;
+    // border: 2px solid red;
     margin: 0 auto;
     text-align: center;
     line-height: 2;
     .Role_name{
       width: 100%;
       color: rebeccapurple;
-      background-color: #fff;
+      // background-color: #fff;
       font-size: 25px;
       margin-bottom: 20px;
       
@@ -60,7 +61,7 @@ main {
       // padding-top: 20px;
       text-align: center;
       width: 100%;
-      border: 1px solid palegreen;
+      // border: 1px solid palegreen;
       margin: 0 auto;
       line-height: 2;
     }

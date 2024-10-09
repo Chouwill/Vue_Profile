@@ -26,7 +26,7 @@
 
 header {
   width: 100%;
-  background-color: forestgreen;
+  // background-color: forestgreen;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,14 +35,14 @@ header {
     // width: 50%;
     display: flex;
     font-size: 25px;
-    background-color: #2e1bad;
+    // background-color: #2e1bad;
     justify-content: center;
     align-items: center;
     flex: 1;
     height: 50px;
     a{
       text-align: center;
-      background-color: #b61212;
+      // background-color: #b61212;
       font-size: 30px;
     }
   }
@@ -50,7 +50,7 @@ header {
     flex: 1;
     display: flex;
     // width: 700px;
-    background-color: #b61212;
+    // background-color: #b61212;
     list-style: none;
     justify-content: space-evenly;
     align-items: center;
