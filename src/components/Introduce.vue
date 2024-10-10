@@ -31,13 +31,25 @@ main {
 
   width: 100%;
   height: 100vh;
+  @media (max-width: 768px) {
+    // background-color: #d8e70d;
+    
+    height: auto;
+    
+  }
   .introduce {
     margin-top: 40px;
     width: 40vw;
     // border: 2px solid red;
     height: 40vh;
     // background-color: #F8F8F8;
-
+    @media (max-width: 768px) {
+      width: 100%;
+      // height: 100vh;
+      // background-color: red;
+      // margin: 50px 0;
+      
+    }
     h2 {
       text-align: center;
     }

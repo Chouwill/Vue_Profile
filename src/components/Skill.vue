@@ -19,10 +19,12 @@
               </div>
               <h2>切版技術</h2>
             </div>
-            <h2>
-              熟悉使用 Element UI、Font Awesome Icon
-              等框架，能夠手刻切版並快速有效地完成響應式畫面設計，提升用戶體驗。
-            </h2>
+            <div class="Skill_text">
+              <h2>
+                熟悉使用 Element UI、Font Awesome Icon
+                等框架，能夠手刻切版並快速有效地完成響應式畫面設計，提升用戶體驗。
+              </h2>
+            </div>
           </li>
           <li>
             <div class="row_title">
@@ -31,10 +33,12 @@
               </div>
               <h2>前端框架</h2>
             </div>
-            <h2>
-              熟悉 Vue.js 和
-              Pinia，能夠構建高效的單頁應用（SPA），並利用狀態管理提升應用的可維護性和擴展性。
-            </h2>
+            <div class="Skill_text">
+              <h2>
+                熟悉 Vue.js 和
+                Pinia，能夠構建高效的單頁應用（SPA），並利用狀態管理提升應用的可維護性和擴展性。
+              </h2>
+            </div>
           </li>
           <li>
             <div class="row_title">
@@ -43,7 +47,9 @@
               </div>
               <h2>Git版本控制</h2>
             </div>
-            <h2>熟悉 Git 進行版本控制，能夠有效管理專案的版本歷史，協作開發流程順暢無阻。</h2>
+            <div class="Skill_text">
+              <h2>熟悉 Git 進行版本控制，能夠有效管理專案的版本歷史，協作開發流程順暢無阻。</h2>
+            </div>
           </li>
         </ul>
       </div>
@@ -53,7 +59,7 @@
 
 <style lang="scss" scoped>
 main {
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
 
   display: flex;
   justify-content: center;
@@ -65,6 +71,11 @@ main {
 
   width: 100%;
   height: auto;
+  @media (max-width: 768px) {
+    // background-color: #444444;
+
+    // flex: 1;
+  }
   .Skill {
     margin-top: 40px;
     width: 60vw;
@@ -98,23 +109,58 @@ main {
       // line-height: 2;
       display: flex;
       // gap: 25px;
+      @media (max-width: 768px) {
+        // background-color: #191167;
+        flex-wrap: wrap;
+      }
       .Skill_img {
         width: 50%;
         // border: 2px solid tomato;
+        @media (max-width: 768px) {
+          // background-color: #191167;
+          width: 100%;
+
+          // flex: 1;
+        }
         img {
           max-width: 65%;
           // border: 2px solid tomato;
           object-fit: cover;
         }
+        @media (max-width: 768px) {
+          // background-color: #7c0b60;
+          max-width: 100%;
+
+          // flex: 1;
+        }
       }
       .Skill_list {
-        width: 50%;
+        width: 50%; //  桌機寬度
         display: flex;
         flex-direction: column;
         justify-content: center;
         text-align: left;
         gap: 25px;
+        box-sizing: border-box;
+        @media (max-width: 768px) {
+          background-color: #0b7c2d; //RWD768寬度  div 寬度展不開
+          width: 100%;
+          // margin-top: 25px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
         li {
+          @media (max-width: 768px) {
+            // border: 1px solid rgb(162, 10, 10); //  RWD 768寬度 border被裁掉一半
+
+            width: 100%;
+          }
+          &:nth-child(1) {
+            @media (max-width: 768px) {
+              margin-top: 25px;
+            }
+          }
           .row_title {
             display: flex;
             // border: 2px solid red;
@@ -129,6 +175,10 @@ main {
               justify-content: center;
               align-items: center;
               border-radius: 50%;
+              @media (max-width: 768px) {
+                width: 70px;
+                height: 70px;
+              }
               img {
                 width: 40px;
                 height: 40px;
@@ -137,6 +187,18 @@ main {
               .Skill_icon {
                 font-size: 40px;
                 color: #000;
+              }
+            }
+          }
+          .Skill_text {
+            @media (max-width: 768px) {
+              width: 90%;
+              // border: 1px solid wheat;
+            }
+            h2 {
+              @media (max-width: 768px) {
+                font-size: 18px;
+                text-align: left;
               }
             }
           }

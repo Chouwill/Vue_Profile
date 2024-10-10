@@ -25,7 +25,7 @@ import Profile from './components/Profile.vue'
 <style lang="scss">
 .container {
   width: 100%;
-  background-color: #d2bc4b;
+  // background-color: #d2bc4b;
   height: 100vh;
 }
 </style>

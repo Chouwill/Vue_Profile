@@ -14,7 +14,7 @@
               <font-awesome-icon icon="fa-brands fa-github" class="Profile_icon" />
             </div>
             <h2>GitHub</h2>
-            <h2>我的編程專案集錦!</h2>
+            <h2 class="Profile_context">我的編程專案集錦!</h2>
           </a>
         </li>
         <li>
@@ -43,7 +43,7 @@
 
 <style lang="scss" scoped>
 main {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 
   display: flex;
   justify-content: center;
@@ -55,15 +55,22 @@ main {
 
   width: 100%;
   height: 100vh;
+  @media (max-width: 768px) {
+    background-color: #d8e70d;
+    flex-direction: column;
+    height: auto;
+    // margin: 500px 0;
+  }
   .Profile {
     margin-top: 40px;
     width: 60vw;
-    // border: 2px solid red;
+    border: 2px solid red;
     height: auto;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 50px;
+
     .Profile_title_box {
       // background-color: indianred;
       width: 50%;
@@ -88,12 +95,20 @@ main {
       line-height: 2;
       display: flex;
       gap: 25px;
+      @media (max-width: 768px) {
+        // background-color: #d8e70d;
+        flex-direction: column;
+      }
 
       li {
         // border: 2px solid #000;
         width: 33.3%;
         // height: 500px;
         padding: 50px 0;
+        @media (max-width: 768px) {
+          // background-color: #d8e70d;
+          width: 100%;
+        }
         &:nth-child(3) {
           margin-right: 25px;
           // border: 2px solid red;
@@ -115,6 +130,12 @@ main {
             .Profile_icon {
               font-size: 70px;
             }
+          }
+          h2 {
+            color: #c1c80a;
+          }
+          .Profile_context {
+            color: orange;
           }
         }
       }
