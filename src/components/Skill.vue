@@ -58,6 +58,9 @@
 </template>
 
 <style lang="scss" scoped>
+* {
+  padding: 0;
+}
 main {
   background-color: #f8f8f8;
 
@@ -85,19 +88,31 @@ main {
     justify-content: center;
     flex-wrap: wrap;
     gap: 50px;
+    @media (max-width: 414px) {
+      width: 100%;
+      
+    }
     .Skill_title_box {
       // background-color: indianred;
-      width: 50%;
+      // border: 1px solid #000;
+      width: 65%;
       text-align: center;
       h2 {
         text-align: center;
         font-size: 2.5em;
         // color: #c1c1c1;
+        @media (max-width: 414px) {
+          font-size: 1.5em;
+        }
       }
       span {
         // background-color: indianred;
         font-size: 1.6em;
         color: #c1c1c1;
+        text-align: center;
+        @media (max-width: 414px) {
+          font-size: 1.4em;
+        }
       }
     }
     .Skill_text {
@@ -110,7 +125,7 @@ main {
       display: flex;
       // gap: 25px;
       @media (max-width: 768px) {
-        // background-color: #191167;
+        width: 100%;
         flex-wrap: wrap;
       }
       .Skill_img {
@@ -126,12 +141,9 @@ main {
           max-width: 65%;
           // border: 2px solid tomato;
           object-fit: cover;
-        }
-        @media (max-width: 768px) {
-          // background-color: #7c0b60;
-          max-width: 100%;
-
-          // flex: 1;
+          @media (max-width: 768px) {
+            max-width: 90%;
+          }
         }
       }
       .Skill_list {
@@ -143,12 +155,15 @@ main {
         gap: 25px;
         box-sizing: border-box;
         @media (max-width: 768px) {
-          background-color: #0b7c2d; //RWD768寬度  div 寬度展不開
-          width: 100%;
+          // background-color: #0b7c2d; //RWD768寬度  div 寬度展不開
+          width: 90%;
           // margin-top: 25px;
           display: flex;
           justify-content: center;
           align-items: center;
+        }
+        @media (max-width: 414px) {
+          margin: 0 auto;
         }
         li {
           @media (max-width: 768px) {

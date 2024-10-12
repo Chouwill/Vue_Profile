@@ -60,7 +60,7 @@ main {
     // border: 2px solid red;
     margin: 0 auto;
     text-align: center;
-    line-height: 2;
+    line-height: 1.5;
     .Role_name{
       width: 100%;
       color: rebeccapurple;
@@ -76,6 +76,19 @@ main {
       // border: 1px solid palegreen;
       margin: 0 auto;
       line-height: 2;
+      @media (max-width: 614px) {
+      width: 75%;
+      // background-color: red;
+      font-size: 20px;
+      
+    }
+      @media (max-width: 414px) {
+      // width: 75%;
+      // background-color: red;
+      font-size: 18px;
+      line-height: 1.3;
+      
+    }
     }
   }
 }

@@ -46,3 +46,11 @@ git push -u origin master# Vue_Profile
 # Vue_Profile
 # Vue_Profile
 # Vue_Profile
+
+
+## 外部訪問的開發模式
+
+```sh
+npm run dev -- --host
+
+```

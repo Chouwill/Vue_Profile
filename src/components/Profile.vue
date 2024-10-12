@@ -23,7 +23,9 @@
               <font-awesome-icon icon="fa-brands fa-blogger" class="Profile_icon" />
             </div>
             <h2>Blooger</h2>
-            <h2>學習寫程式的過程中也不忘將學習經驗紀錄下來！ 同時也熱愛分享生活體會與閱讀心得!</h2>
+            <h2 class="Profile_context">
+              學習寫程式的過程中也不忘將學習經驗紀錄下來！ 同時也熱愛分享生活體會與閱讀心得!
+            </h2>
           </a>
         </li>
         <li>
@@ -32,7 +34,7 @@
               <font-awesome-icon icon="fa-brands fa-linkedin" class="Profile_icon" />
             </div>
             <h2>Linkedin</h2>
-            <h2>個人求學經歷 &工作經驗</h2>
+            <h2 class="Profile_context">個人求學經歷 &工作經驗</h2>
           </a>
         </li>
       </ul>
@@ -64,7 +66,7 @@ main {
   .Profile {
     margin-top: 40px;
     width: 60vw;
-    border: 2px solid red;
+    // border: 2px solid red;
     height: auto;
     display: flex;
     justify-content: center;
@@ -72,74 +74,89 @@ main {
     gap: 50px;
 
     .Profile_title_box {
-      // background-color: indianred;
       width: 50%;
       text-align: center;
       h2 {
         text-align: center;
         font-size: 2.5em;
-        // color: #c1c1c1;
+        @media (max-width: 414px) {
+          font-size: 1.5em;
+        }
       }
       span {
-        // background-color: indianred;
         font-size: 1.6em;
         color: #c1c1c1;
       }
     }
+
     .Profile_text {
       width: 100%;
       height: auto;
-      // border: 5px solid rgb(18, 173, 70);
       margin: 0 auto;
       text-align: center;
       line-height: 2;
       display: flex;
       gap: 25px;
+
       @media (max-width: 768px) {
-        // background-color: #d8e70d;
-        flex-direction: column;
+        flex-direction: column; // 在小螢幕上改為垂直排列
+        width: 100%; // 確保佔滿父層寬度
+        padding: 0; // 清除填充
       }
 
       li {
         // border: 2px solid #000;
-        width: 33.3%;
-        // height: 500px;
+        width: 33.3%; // 桌面版本的寬度
         padding: 50px 0;
+
         @media (max-width: 768px) {
-          // background-color: #d8e70d;
-          width: 100%;
+          width: 100%; // 手機版本的寬度
+          padding: 20px 0; // 調整填充
+          margin: 0; // 清除預設邊距
         }
-        &:nth-child(3) {
-          margin-right: 25px;
-          // border: 2px solid red;
-        }
+
         a {
           color: #000;
+
           .Profile_icon_container {
-            width: 150px; /* 調整為所需的圓形大小 */
-            height: 150px; /* 調整為所需的圓形大小 */
-            background-color: #f8f8f8; /* 圓形背景顏色 */
-            border-radius: 50%; /* 使其成為圓形 */
+            width: 150px;
+            height: 150px;
+            background-color: #f8f8f8;
+            border-radius: 50%;
             display: flex;
             justify-content: center;
-            align-items: center; /* 垂直和水平居中對齊圖標 */
-            margin: 0 auto; /* 使圓形容器居中 */
+            align-items: center;
+            margin: 0 auto;
+            @media (max-width: 414px) {
+              width: 100px;
+              height: 100px;
+            }
+
             &:hover {
               background-color: #66d6c5;
             }
             .Profile_icon {
               font-size: 70px;
+              @media (max-width: 414px) {
+                font-size: 50px;
+              }
             }
           }
+
           h2 {
             color: #c1c80a;
           }
+
           .Profile_context {
             color: orange;
+            @media (max-width: 768px) {
+              font-size: 17px;
+            }
           }
         }
       }
     }
+
     .MORE_LINK {
       padding: 20px 50px;
       background-color: orange;
@@ -147,4 +164,6 @@ main {
     }
   }
 }
+
+//  我的LI標籤在RWD768寬度無法佔滿Profile_text父層的寬度
 </style>
