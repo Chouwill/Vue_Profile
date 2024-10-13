@@ -62,9 +62,17 @@ footer {
       justify-content: center;
       align-items: center;
       border-radius: 50%;
+      @media (max-width: 820px) {
+        width: 70px;
+        height: 70px;
+      }
       @media (max-width: 768px) {
         width: 70px;
         height: 70px;
+      }
+      @media (max-width: 430px) {
+        width: 60px;
+        height: 60px;
       }
       @media (max-width: 414px) {
         width: 50px;

@@ -90,7 +90,6 @@ main {
     gap: 50px;
     @media (max-width: 414px) {
       width: 100%;
-      
     }
     .Skill_title_box {
       // background-color: indianred;
@@ -124,16 +123,26 @@ main {
       // line-height: 2;
       display: flex;
       // gap: 25px;
+      @media (max-width: 820px) {
+        
+        flex-wrap: wrap;
+      }
       @media (max-width: 768px) {
         width: 100%;
         flex-wrap: wrap;
       }
       .Skill_img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 50%;
         // border: 2px solid tomato;
-        @media (max-width: 768px) {
+        @media (max-width: 820px) {
           // background-color: #191167;
+          // border: 2px solid rgb(39, 136, 34);
+
           width: 100%;
+          flex-wrap: wrap;
 
           // flex: 1;
         }
@@ -141,6 +150,9 @@ main {
           max-width: 65%;
           // border: 2px solid tomato;
           object-fit: cover;
+          @media (max-width: 820px) {
+            max-width: 100%;
+          }
           @media (max-width: 768px) {
             max-width: 90%;
           }
@@ -154,9 +166,18 @@ main {
         text-align: left;
         gap: 25px;
         box-sizing: border-box;
+        @media (max-width: 820px) {
+          // background-color: #0b7c2d; //RWD768寬度  div 寬度展不開
+          // border: 20px solid peru;
+          width: 100%;
+          // margin-top: 25px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
         @media (max-width: 768px) {
           // background-color: #0b7c2d; //RWD768寬度  div 寬度展不開
-          width: 90%;
+          width: 100%;
           // margin-top: 25px;
           display: flex;
           justify-content: center;
@@ -211,6 +232,10 @@ main {
               // border: 1px solid wheat;
             }
             h2 {
+              @media (max-width: 820px) {
+                font-size: 18px;
+                text-align: left;
+              }
               @media (max-width: 768px) {
                 font-size: 18px;
                 text-align: left;

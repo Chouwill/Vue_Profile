@@ -1,15 +1,13 @@
 <script setup>
 import { ref } from 'vue'
 
-const MenuActive = ref(false);
-console.log(MenuActive);
+const MenuActive = ref(false)
+console.log(MenuActive)
 
-const OpenMenu = ()=>{
-  MenuActive.value = !MenuActive.value;
-  console.log(MenuActive.value);
-  
+const OpenMenu = () => {
+  MenuActive.value = !MenuActive.value
+  console.log(MenuActive.value)
 }
-
 </script>
 
 <template>
@@ -17,7 +15,7 @@ const OpenMenu = ()=>{
     <div class="LOGO">
       <a href="#">Chouwill</a>
     </div>
-    <ul :class="['Phone_menu',{active: MenuActive }]">
+    <ul :class="['Phone_menu', { active: MenuActive }]">
       <li>
         <a href="#">個人檔案</a>
       </li>
@@ -47,6 +45,11 @@ header {
   justify-content: center;
   align-items: center;
   gap: 10vw;
+  @media (max-width: 820px) {
+    background-color: #444444;
+    gap: 0px;
+    // flex: 1;
+  }
   @media (max-width: 768px) {
     background-color: #444444;
 
@@ -61,6 +64,11 @@ header {
     align-items: center;
     flex: 1;
     height: 50px;
+    @media (max-width: 820px) {
+      // background-color: #aada0b;
+
+      flex: 1;
+    }
     @media (max-width: 768px) {
       // background-color: #18891e;
 
@@ -72,11 +80,12 @@ header {
       font-size: 30px;
     }
   }
-  ul {   // 桌機Menu 樣式
+  ul {
+    // 桌機Menu 樣式
     flex: 1;
     display: flex;
     // width: 700px;
-    background-color: #b61212;
+    // background-color: #b61212;
     list-style: none;
     justify-content: space-evenly;
     align-items: center;
@@ -88,16 +97,26 @@ header {
       a {
         font-size: 25px;
         color: #000;
+        @media (max-width: 820px) {
+          // color: #b61212;
+          font-size: 20px;
+        }
       }
     }
   }
-  .Phone_menu{  // 手機Menu 樣式
-    background-color: orange;
-    @media (max-width: 768px) {
-      background-color: orange;
+  .Phone_menu {
+    // 手機Menu 樣式
+    // background-color: orange;
+    @media (max-width: 820px) {
+      // background-color: rgb(92, 11, 84);
+      flex: 1;
+      gap: 10px;
     }
-    &.active{
-      width: 80%;
+    @media (max-width: 768px) {
+      // background-color: orange;
+    }
+    &.active {
+      width: 40%;
       // border: 1px solid white;
       height: 35vh;
       background-color: #444444;
@@ -105,7 +124,7 @@ header {
       flex-direction: column;
       position: fixed;
       top: 42px;
-      left: 145px;
+      // left: 145px;
       right: 0;
       bottom: 0;
       z-index: 90;

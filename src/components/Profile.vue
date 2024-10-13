@@ -58,7 +58,7 @@ main {
   width: 100%;
   height: 100vh;
   @media (max-width: 768px) {
-    background-color: #d8e70d;
+    // background-color: #d8e70d;
     flex-direction: column;
     height: auto;
     // margin: 500px 0;
@@ -72,10 +72,18 @@ main {
     justify-content: center;
     flex-wrap: wrap;
     gap: 50px;
+    @media (max-width: 820px) {
+      gap: 10px;
+      // border: 5px solid rgb(176, 117, 29);
+      width: 90%;
+    }
 
     .Profile_title_box {
       width: 50%;
       text-align: center;
+      @media (max-width: 820px) {
+        // border: 2px solid palegreen;
+      }
       h2 {
         text-align: center;
         font-size: 2.5em;
@@ -97,6 +105,11 @@ main {
       line-height: 2;
       display: flex;
       gap: 25px;
+      @media (max-width: 820px) {
+        // border: 2px solid palegreen;
+        width: 100%;
+        padding: 0;
+      }
 
       @media (max-width: 768px) {
         flex-direction: column; // 在小螢幕上改為垂直排列
@@ -108,6 +121,7 @@ main {
         // border: 2px solid #000;
         width: 33.3%; // 桌面版本的寬度
         padding: 50px 0;
+        
 
         @media (max-width: 768px) {
           width: 100%; // 手機版本的寬度
