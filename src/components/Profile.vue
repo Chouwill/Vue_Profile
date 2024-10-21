@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <main>
+  <main ref="Profile" class="section">
     <div class="Profile">
       <div class="Profile_title_box">
         <h2>個人檔案</h2>
@@ -14,7 +14,7 @@
               <font-awesome-icon icon="fa-brands fa-github" class="Profile_icon" />
             </div>
             <h2>GitHub</h2>
-            <h2 class="Profile_context">我的編程專案集錦!</h2>
+            <h2 class="Profile_context">探索我的開源專案和編程作品!</h2>
           </a>
         </li>
         <li>
@@ -23,22 +23,20 @@
               <font-awesome-icon icon="fa-brands fa-blogger" class="Profile_icon" />
             </div>
             <h2>Blooger</h2>
-            <h2 class="Profile_context">
-              學習寫程式的過程中也不忘將學習經驗紀錄下來！ 同時也熱愛分享生活體會與閱讀心得!
-            </h2>
+            <h2 class="Profile_context">記錄我的學習旅程<br />分享程式設計的技巧與生活的點滴！</h2>
           </a>
         </li>
-        <li>
+        <!-- <li>
           <a href="#">
             <div class="Profile_icon_container">
               <font-awesome-icon icon="fa-brands fa-linkedin" class="Profile_icon" />
             </div>
             <h2>Linkedin</h2>
-            <h2 class="Profile_context">個人求學經歷 &工作經驗</h2>
+            <h2 class="Profile_context">查看我的專業背景和工作經歷。</h2>
           </a>
-        </li>
+        </li> -->
       </ul>
-      <a class="MORE_LINK" href="#">More About me</a>
+      <a class="MORE_LINK" href="#">More About Chouwill</a>
     </div>
   </main>
 </template>
@@ -56,7 +54,7 @@ main {
   background-blend-mode: lighten; /* 混合模式，使背景圖片變淡 */
 
   width: 100%;
-  height: 100vh;
+  height: auto;
   @media (max-width: 768px) {
     // background-color: #d8e70d;
     flex-direction: column;
@@ -72,8 +70,16 @@ main {
     justify-content: center;
     flex-wrap: wrap;
     gap: 50px;
+    @media (max-width: 1092px) {
+      width: 80vw;
+      gap: 0;
+    }
+    @media (max-width: 978px) {
+      width: 100vw;
+      gap: 0;
+    }
     @media (max-width: 820px) {
-      gap: 10px;
+      gap: 20px;
       // border: 5px solid rgb(176, 117, 29);
       width: 90%;
     }
@@ -81,19 +87,24 @@ main {
     .Profile_title_box {
       width: 50%;
       text-align: center;
+      // border: 2px solid palegreen;
+
       @media (max-width: 820px) {
         // border: 2px solid palegreen;
+        
       }
       h2 {
         text-align: center;
         font-size: 2.5em;
+        color: #000;
         @media (max-width: 414px) {
           font-size: 1.5em;
         }
       }
       span {
         font-size: 1.6em;
-        color: #c1c1c1;
+        // color: #c1c1c1;
+        color: #000;
       }
     }
 
@@ -119,9 +130,10 @@ main {
 
       li {
         // border: 2px solid #000;
-        width: 33.3%; // 桌面版本的寬度
+        //width: 33.3%; // 桌面版本的寬度
         padding: 50px 0;
-        
+        width: 50%;
+        // border: 5px solid yellow;
 
         @media (max-width: 768px) {
           width: 100%; // 手機版本的寬度
@@ -158,15 +170,22 @@ main {
           }
 
           h2 {
-            color: #c1c80a;
+            // color: #c1c80a;
+            color: #000;
           }
 
           .Profile_context {
-            color: orange;
+            color: #000;
             @media (max-width: 768px) {
               font-size: 17px;
             }
           }
+        }
+      }
+      li:nth-child(1){
+        .Profile_context{
+          // color: peru;
+          line-height: 4;
         }
       }
     }
@@ -175,6 +194,11 @@ main {
       padding: 20px 50px;
       background-color: orange;
       border-radius: 10px;
+      margin: 35px 0;
+      font-weight: bolder;
+      @media (max-width: 820px) {
+      margin: 0 0 80px 0;
+    }
     }
   }
 }

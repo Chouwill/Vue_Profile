@@ -54,3 +54,16 @@ git push -u origin master# Vue_Profile
 npm run dev -- --host
 
 ```
+
+## 打包專案  
+
+```sh
+npm run build
+
+```
+## 部屬專案至page
+
+```sh
+npm run deploy
+
+```

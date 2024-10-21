@@ -14,17 +14,17 @@
         </a>
       </li>
       <li>
-        <a href="">
+        <a href="https://ithelp.ithome.com.tw/users/20169661">
           <font-awesome-icon icon="fa-brands fa-blogger" class="community_icon" />
         </a>
       </li>
-      <li>
+      <!-- <li>
         <a href="#">
           <font-awesome-icon icon="fa-brands fa-linkedin" class="community_icon" />
         </a>
-      </li>
+      </li> -->
     </ul>
-    <span>© Chouwill 2021 🇹🇼</span>
+    <span>© Chouwill 2024 🇹🇼</span>
   </footer>
 </template>
 

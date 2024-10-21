@@ -1,6 +1,41 @@
-*{
+/* @import '/src/assets/reset.css'; */
+/* styles.css 或 App.vue 的 <style> 區塊 */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+.source-sans-3-bold {
+  font-family: 'Source Sans 3', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700; /* 700 表示粗體 */
+  font-style: normal;
+}
+
+.source-sans-3-regular {
+  font-family: 'Source Sans 3', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* 400 表示正常字重 */
+  font-style: normal;
+}
+
+* {
   list-style: none;
   box-sizing: border-box;
   text-decoration: none;
   border: none;
+  font-family: 'Source Sans 3', sans-serif;
 }
+a,
+button {
+  cursor: pointer;
+}
+/* 在你的 style.css 中 */
+body {
+  margin: 0; /* 清除 body 的外邊距 */
+}
+
+.header,
+.footer,
+.content {
+  margin: 20px; /* 為特定組件添加邊距 */
+}
+
+/* @import '/src/assets/reset.css'; */

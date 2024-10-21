@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <main>
+  <main ref="Project" class="section">
     <div class="Project">
       <div class="Project_title_box">
         <h2>專案成就</h2>
